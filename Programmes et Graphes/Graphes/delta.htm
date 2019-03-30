@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Highcharts Example</title>
+
+        <style type="text/css">
+            #container {
+                min-width: 310px;
+                max-width: 800px;
+                height: 400px;
+                margin: 0 auto
+            }
+         </style>
+    </head>
+    <body>
+            <script src="../../Highcharts-6.2.0/code/highcharts.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/series-label.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/exporting.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/export-data.js"></script>
+
+            <div id="container"></div>
+
+
+
+                    <script type="text/javascript">
+
+                Highcharts.chart('container', {
+
+                title: {
+                    text: 'Algorithmes sur les ensembles'
+                },
+
+                yAxis: {
+                    title: {
+                        text: 'Temps (secondes)'
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false
+                        }
+                    }
+                },
+
+                series: [
+                {name: 'Delta (itératif)',
+                    data: [
+                        [10000, 0.005400],
+                        [20000, 0.008900],
+                        [30000, 0.012800],
+                        [40000, 0.016000],
+                        [50000, 0.020100],
+                        [60000, 0.024600],
+                        [70000, 0.028600],
+                        [80000, 0.031900],
+                        [90000, 0.035600],
+                        [100000, 0.039000],
+                        [110000, 0.043200],
+                        [120000, 0.045900],
+                        [130000, 0.050500],
+                        [140000, 0.055100],
+                        [150000, 0.059200]
+                    ]},
+                 {name: 'Delta (récurcif)',
+                    data: [
+                        [10000, 0.004800],
+                        [20000, 0.009400],
+                        [30000, 0.014500],
+                        [40000, 0.017200],
+                        [50000, 0.019900],
+                        [60000, 0.023800],
+                        [70000, 0.027800],
+                        [80000, 0.031600],
+                        [90000, 0.035700],
+                        [100000, 0.039300],
+                        [110000, 0.043100],
+                        [120000, 0.047500],
+                        [130000, 0.052000],
+                        [140000, 0.056300],
+                        [150000, 0.060300]
+                    ]},
+                ]
+            });
+        </script>
+    </body>
+</html>

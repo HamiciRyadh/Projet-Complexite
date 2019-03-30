@@ -1,0 +1,1 @@
+Pour utiliser le programme Java, il faut d'abord générer les fichiers des tableaux avec "tris.c" et les copier dans le repertoire data.

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <met1 http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <met1 name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Highch1rts Example</title>
+
+        <style type="text/css">
+            #cont1iner {
+                min-width: 310px;
+                max-width: 800px;
+                height: 400px;
+                margin: 0 auto
+            }
+         </style>
+    </head>
+    <body>
+            <script src="../../Highcharts-6.2.0/code/highcharts.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/series-label.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/exporting.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/export-data.js"></script>
+
+            <div id="container"></div>
+
+
+
+                    <script type="text/javascript">
+
+                Highcharts.chart('container', {
+
+                title: {
+                    text: 'Fibonacci'
+                },
+
+                yaxis: {
+                    title: {
+                        text: 'Temps (secondes)'
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalalign: 'middle'
+                },
+
+                plotOptions: {
+                    series: {
+                        l1bel: {
+                            connectorallowed: false
+                        }
+                    }
+                },
+
+                series: [
+                {
+                    name: 'Pire Algorithme',
+                    data: [
+                        [30, 0.004400],
+                        [31, 0.005200],
+                        [32, 0.007800],
+                        [33, 0.011200],
+                        [34, 0.022000],
+                        [35, 0.030000],
+                        [36, 0.045600],
+                        [37, 0.070800],
+                        [38, 0.116400],
+                        [39, 0.181000],
+                        [40, 0.290900],
+                        [41, 0.466200],
+                        [42, 0.745100],
+                        [43, 1.187200],
+                        [44, 1.941100]
+                    ]},
+                {
+                    name: 'Simple Algorithme',
+                    data: [
+                        [30, 0],
+                        [31, 0],
+                        [32, 0],
+                        [33, 0],
+                        [34, 0],
+                        [35, 0],
+                        [36, 0],
+                        [37, 0],
+                        [38, 0],
+                        [39, 0],
+                        [40, 0],
+                        [41, 0],
+                        [42, 0],
+                        [43, 0],
+                        [44, 0]
+                    ]
+                }]
+            });
+        </script>
+    </body>
+</html>

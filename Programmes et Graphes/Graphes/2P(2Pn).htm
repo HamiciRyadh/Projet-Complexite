@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <met1 http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <met1 name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Highch1rts Example</title>
+
+        <style type="text/css">
+            #cont1iner {
+                min-width: 310px;
+                max-width: 800px;
+                height: 400px;
+                margin: 0 auto
+            }
+         </style>
+    </head>
+    <body>
+            <script src="../../Highcharts-6.2.0/code/highcharts.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/series-label.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/exporting.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/export-data.js"></script>
+
+            <div id="container"></div>
+
+
+
+                    <script type="text/javascript">
+
+                Highcharts.chart('container', {
+
+                title: {
+                    text: 'Calcul de 2^(2^n)'
+                },
+
+                yaxis: {
+                    title: {
+                        text: 'Temps (secondes)'
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalalign: 'middle'
+                },
+
+                plotOptions: {
+                    series: {
+                        l1bel: {
+                            connectorallowed: false
+                        }
+                    }
+                },
+
+                series: [
+                {
+                    name: 'Pire Algorithme',
+                    data: [
+                        [28, 0.3],
+                        [29, 0.59],
+                        [30, 1.24],
+                        [31, 2.31],
+                        [32, 4.52],
+                        [33, 9.15],
+                        [34, 18.03],
+                        [35, 35.97],
+                        [36, 72.04],
+                        [37, 144.61],
+                        [38, 290.56]
+                    ]
+                },
+                {
+                    name: 'Simple Algorithme',
+                    data: [
+                        [28, 0],
+                        [29, 0],
+                        [30, 0],
+                        [31, 0],
+                        [32, 0],
+                        [33, 0],
+                        [34, 0],
+                        [35, 0],
+                        [36, 0],
+                        [37, 0],
+                        [38, 0]
+                    ]
+                },
+                {
+                    name: 'Tres Simple Algorithme',
+                    data: [
+                        [28, 0],
+                        [29, 0],
+                        [30, 0],
+                        [31, 0],
+                        [32, 0],
+                        [33, 0],
+                        [34, 0],
+                        [35, 0],
+                        [36, 0],
+                        [37, 0],
+                        [38, 0]
+                    ]
+                }]
+            });
+        </script>
+    </body>
+</html>

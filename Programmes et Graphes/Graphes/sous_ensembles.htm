@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Highcharts Example</title>
+
+        <style type="text/css">
+            #container {
+                min-width: 310px;
+                max-width: 800px;
+                height: 400px;
+                margin: 0 auto
+            }
+         </style>
+    </head>
+    <body>
+            <script src="../../Highcharts-6.2.0/code/highcharts.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/series-label.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/exporting.js"></script>
+            <script src="../../Highcharts-6.2.0/code/modules/export-data.js"></script>
+
+            <div id="container"></div>
+
+
+
+                    <script type="text/javascript">
+
+                Highcharts.chart('container', {
+
+                title: {
+                    text: 'Algorithmes sur les ensembles'
+                },
+
+                yAxis: {
+                    title: {
+                        text: 'Temps (secondes)'
+                    }
+                },
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false
+                        }
+                    }
+                },
+
+                series: [
+                {name: 'Génération de sous ensembles (Itératif)',
+                    data: [
+                        [10, 0.000000],
+                        [11, 0.000000],
+                        [12, 0.000000],
+                        [13, 0.001500],
+                        [14, 0.001600],
+                        [15, 0.006300],
+                        [16, 0.006200],
+                        [17, 0.015600],
+                        [18, 0.032800],
+                        [19, 0.064200],
+                        [20, 0.120200],
+                        [21, 0.237500],
+                        [22, 0.484200],
+                        [23, 1.003000],
+                        [24, 2.116400]
+                    ]},
+                {name: 'Génération de sous ensembles (Récurcif)',
+                    data: [
+                        [10, 0.000000],
+                        [11, 0.000000],
+                        [12, 0.000000],
+                        [13, 0.001600],
+                        [14, 0.001600],
+                        [15, 0.003100],
+                        [16, 0.010900],
+                        [17, 0.015700],
+                        [18, 0.031200],
+                        [19, 0.061000],
+                        [20, 0.115600],
+                        [21, 0.236000],
+                        [22, 0.487300],
+                        [23, 1.006100],
+                        [24, 2.187100]
+                    ]},
+                ]
+            });
+        </script>
+    </body>
+</html>
